@@ -6,7 +6,7 @@ Call windows//改變視窗大小
 Call Plugin.Window.Top(Hwnd, 1)//讓遊戲置前 0  取消 1
 
 
-For i = 1 To 71
+For i = 1 To 72
 	Call Plugin.Bkgnd.KeyPress(Hwnd, 44)//Print Screen, 按
 	Delay 2500
 	Call Plugin.Bkgnd.LeftClick(Hwnd, 411, 518)
