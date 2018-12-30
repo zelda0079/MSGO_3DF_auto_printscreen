@@ -1,0 +1,21 @@
+//運行於1280*720
+//自動記錄設計圖1.0 by zelda
+
+Hwnd = Plugin.Window.Find(0, "Mobile Suit Gundam Online")
+Call windows//改變視窗大小
+Call Plugin.Window.Top(Hwnd, 1)//讓遊戲置前 0  取消 1
+
+
+For i = 1 To 71
+	Call Plugin.Bkgnd.KeyPress(Hwnd, 44)//Print Screen, 按
+	Delay 2500
+	Call Plugin.Bkgnd.LeftClick(Hwnd, 411, 518)
+	Delay 2500
+Next
+
+
+Sub windows//改變視窗大小
+  Call Plugin.Window.Size(Hwnd, 1280, 720)  //默認視窗1100*600
+  Call Plugin.Window.Move(Hwnd, 0, 0)   //移到最左上角
+  Delay 1000
+End Sub
