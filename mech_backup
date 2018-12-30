@@ -10,7 +10,7 @@ Dim n
 
 n=33//有多少版, 自行人手設置
 
-For k=1 to n-1
+For k=1 to n
 	y=170  //每版第1個機體的Y座標
 	For i = 1 To 7
 		Call Plugin.Bkgnd.LeftClick(Hwnd, 500, y) //按機體
