@@ -1,0 +1,46 @@
+//運行於1280*720
+//自動記錄機體1.0 by zelda
+
+Hwnd = Plugin.Window.Find(0, "Mobile Suit Gundam Online")
+Call windows//改變視窗大小
+Call Plugin.Window.Top(Hwnd, 1)//讓遊戲置前 0  取消 1
+
+Dim y
+Dim n 
+
+n=33//有多少版, 自行人手設置
+
+For k=1 to n-1
+	y=170  //每版第1個機體的Y座標
+	For i = 1 To 7
+		Call Plugin.Bkgnd.LeftClick(Hwnd, 500, y) //按機體
+		Delay 2000
+		Call Plugin.Bkgnd.KeyPress(Hwnd, 44) //拍照機體參數
+		Delay 2500
+		Call Plugin.Bkgnd.LeftClick(Hwnd, 1080, 520) //按特性
+		Delay 2000
+		Call Plugin.Bkgnd.KeyPress(Hwnd, 44)  //拍照機體特性
+		Delay 2500
+		Call Plugin.Bkgnd.LeftClick(Hwnd, 950, 520) //按特性
+		Delay 1000
+		Call Plugin.Bkgnd.LeftClick(Hwnd, 1080, 70) //按返回
+		Delay 2000
+		y=y+45 //換下一台機體
+	Next
+	
+	Call Plugin.Bkgnd.LeftClick(Hwnd, 420, 500)  //切換下一頁
+	Delay 2000
+Next
+
+
+Sub windows//改變視窗大小
+  Call Plugin.Window.Size(Hwnd, 1280, 720)  //默認視窗1100*600
+  Call Plugin.Window.Move(Hwnd, 0, 0)   //移到最左上角
+  Delay 1000
+End Sub
+
+
+
+
+
+
